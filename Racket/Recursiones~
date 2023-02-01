@@ -1,0 +1,39 @@
+#lang plai
+(define (my-suma sum1 sum2)
+  (+ sum1 sum2))
+
+(define PI 3.1415926535)
+
+(define (area-circulo radio)
+  (* PI (* radio radio)))
+(define (mayor-que numero1 numero2)
+  (if (> numero1 numero2) #t #f))
+(define (divide-a x y)
+  (cond [(= y 1) #t]
+        [else (if (integer? (/ y x)) #t #f)]))
+(define (por-dos n) (* n 2))
+;;recursion para saber cuantos elementos hay
+(define (how-many lista)
+  (cond
+    [(empty? lista) 0]
+    [else (+ 1 (how-many (rest lista)))]))
+
+(define list-of-numbers?
+  (lambda (lst)
+    (if (null? lst)
+        #t
+        (if (number? (car lst))
+            (list-of-numbers? (cdr lst))
+            #f))))
+
+;;remove recursivo
+;; (car (1 2 3 4)) --> 1
+;; (cdr (1 2 3 4)) --> '(2 3 4)
+(define (remove s los)
+  (if (null? los)
+      '() ;;caso base
+      (if (eq? (car los) s);;es igual el primer elemento con el s?
+          (remove s (cdr los)) ;;aquí se esta eliminando s de los
+          (cons (car los) (remove s (cdr los))))));;agarra el primer elemento y continua con remove
+
+(define lista '(2 3 4 63))

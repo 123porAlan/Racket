@@ -1,0 +1,7 @@
+#lang racket
+;;Ejercicio 3
+(struct persona (nombre edad peso altura))
+(define (imc p)
+         (/ (persona-peso p) (persona-altura p)))
+
+(define p1 (persona "Juan" 19 65 1.75))

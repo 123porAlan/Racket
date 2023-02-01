@@ -1,0 +1,6 @@
+#lang plai
+(define (decremental? 4num)
+  (cond
+    [(and (and (> (car 4num) (cadr 4num)) (> (cadr 4num) (caddr 4num)))
+          (> (caddr 4num) (cadddr 4num))) #f #t]
+     [else #t #f]))

@@ -1,0 +1,19 @@
+#lang racket
+(struct pit (snake goos))
+
+(pit
+ (snake
+  "up"
+  (list (posn 1 1) (posn 1 2) (posn 1 3)))
+ (list
+  (goo (posn 1 0) 3)
+  (goo (posn 5 8) 15)))
+
+;;(define snake-example
+  ;;(snake "up" (list (posn 1 1) (posn 1 2) (posn 1 3))))
+
+;;(define goo example
+  ;;(list (goo (posn 1 0) 3) (goo (posn 5 8) 15)))
+
+;;(define pit-example
+  ;;(pit sanake-example goo-example))
