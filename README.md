@@ -1,2 +1,2 @@
 # Racket
-Curso sobre racket impartido por la UNAM
+Curso de racket impartido por la UNAM
